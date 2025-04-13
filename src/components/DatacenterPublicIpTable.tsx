@@ -1,5 +1,5 @@
 // src/components/DatacenterPublicIpTable.tsx
-import React from 'react';
+import React, { useMemo, memo } from 'react';
 import {
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography, useTheme
 } from '@mui/material';
@@ -12,18 +12,22 @@ interface DatacenterPublicIpTableProps {
 const DatacenterPublicIpTable: React.FC<DatacenterPublicIpTableProps> = ({ publicIPs }) => {
   const theme = useTheme();
 
-  // Agrupa os IPs por nome do cluster para renderização
-  const groupedIPs = publicIPs.reduce((acc, ip) => {
-    const cluster = ip.clusterName;
-    if (!acc[cluster]) {
-      acc[cluster] = [];
-    }
-    acc[cluster].push(ip);
-    return acc;
-  }, {} as { [key: string]: PublicIpDetail[] });
+  // Otimização com useMemo para agrupar IPs
+  const { groupedIPs, sortedClusterNames } = useMemo(() => {
+    // console.log("Recalculando agrupamento de IPs para tabela");
+    const grouped = publicIPs.reduce((acc, ip) => {
+      const cluster = ip.clusterName;
+      if (!acc[cluster]) {
+        acc[cluster] = [];
+      }
+      acc[cluster].push(ip);
+      return acc;
+    }, {} as { [key: string]: PublicIpDetail[] });
 
-  // Ordena os nomes dos clusters para exibição consistente
-  const sortedClusterNames = Object.keys(groupedIPs).sort();
+    const sorted = Object.keys(grouped).sort();
+    return { groupedIPs: grouped, sortedClusterNames: sorted };
+  }, [publicIPs]);
+
 
   if (publicIPs.length === 0) {
     return (
@@ -36,16 +40,41 @@ const DatacenterPublicIpTable: React.FC<DatacenterPublicIpTableProps> = ({ publi
   }
 
   return (
-    <Paper elevation={2} sx={{ overflow: 'hidden' }}> {/* Oculta overflow se necessário */}
-      <TableContainer sx={{ maxHeight: 440 }}> {/* Altura máxima com scroll */}
+    <Paper elevation={2} sx={{ overflow: 'hidden' }}>
+      {/* Container com altura máxima e scroll */}
+      <TableContainer sx={{ maxHeight: 440 }}>
+        {/* Tabela com cabeçalho fixo */}
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
-              {/* Colunas da Tabela */}
-              <TableCell sx={{ fontWeight: 'bold' }}>Endereço/Prefixo</TableCell>
-              <TableCell align="right" sx={{ fontWeight: 'bold' }}>Total</TableCell>
-              <TableCell align="right" sx={{ fontWeight: 'bold' }}>Usados</TableCell>
-              <TableCell align="right" sx={{ fontWeight: 'bold' }}>Livres</TableCell>
+              {/* --- CORREÇÃO APLICADA AQUI --- */}
+              {/* Adiciona backgroundColor às células do cabeçalho sticky */}
+              {/* para que o conteúdo do corpo não passe por cima visualmente. */}
+              <TableCell sx={{
+                fontWeight: 'bold',
+                backgroundColor: theme.palette.background.paper, // Cor de fundo opaca
+              }}>
+                Endereço/Prefixo
+              </TableCell>
+              <TableCell align="right" sx={{
+                fontWeight: 'bold',
+                backgroundColor: theme.palette.background.paper, // Cor de fundo opaca
+              }}>
+                Total
+              </TableCell>
+              <TableCell align="right" sx={{
+                fontWeight: 'bold',
+                backgroundColor: theme.palette.background.paper, // Cor de fundo opaca
+              }}>
+                Usados
+              </TableCell>
+              <TableCell align="right" sx={{
+                fontWeight: 'bold',
+                backgroundColor: theme.palette.background.paper, // Cor de fundo opaca
+              }}>
+                Livres
+              </TableCell>
+              {/* --- FIM DA CORREÇÃO --- */}
             </TableRow>
           </TableHead>
           <TableBody>
@@ -54,12 +83,15 @@ const DatacenterPublicIpTable: React.FC<DatacenterPublicIpTableProps> = ({ publi
                 {/* Linha de Subcabeçalho para o Cluster */}
                 <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
                   <TableCell
-                    colSpan={4} // Ocupa todas as colunas
+                    colSpan={4}
                     sx={{
-                      // py: 1, px: 2 // Menos padding vertical
                       fontWeight: 'bold',
-                      backgroundColor: theme.palette.mode === 'dark' ? theme.palette.grey[800] : theme.palette.grey[200], // Fundo diferente
-                      // borderBottom: `1px solid ${theme.palette.divider}`
+                      // Ajusta o fundo do sub-header para diferenciar ligeiramente
+                      backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.08)' : theme.palette.grey[100],
+                      // Mantém um padding menor e borda sutil se desejar
+                      // py: 0.5,
+                      // borderBottom: `1px solid ${theme.palette.divider}`,
+                      // borderTop: `1px solid ${theme.palette.divider}`
                     }}
                   >
                     Cluster: {clusterName}
@@ -68,10 +100,10 @@ const DatacenterPublicIpTable: React.FC<DatacenterPublicIpTableProps> = ({ publi
                 {/* Linhas de Dados para IPs deste Cluster */}
                 {groupedIPs[clusterName].map((ip) => (
                   <TableRow
-                    key={ip.Id || `${ip.Address}/${ip.Prefix}`} // Usa ID ou combinação como chave
-                    hover // Efeito ao passar o mouse
+                    key={ip.Id || `${ip.Address}/${ip.Prefix}`}
+                    hover
                     sx={{
-                      '&:last-child td, &:last-child th': { border: 0 }, // Remove borda da última linha do grupo
+                      '&:last-child td, &:last-child th': { border: 0 },
                       '&:hover': { backgroundColor: theme.palette.action.hover }
                     }}
                   >
@@ -92,4 +124,5 @@ const DatacenterPublicIpTable: React.FC<DatacenterPublicIpTableProps> = ({ publi
   );
 };
 
-export default DatacenterPublicIpTable;
+// Mantém a memoização
+export default memo(DatacenterPublicIpTable);

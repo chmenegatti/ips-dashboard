@@ -1,33 +1,18 @@
 // src/App.tsx
 import React, { useState } from 'react';
 import {
-  Box, Typography, CssBaseline, CircularProgress, Alert, Container,
-  ThemeProvider, createTheme, Tabs, Tab, Paper
+  Box, Typography, CircularProgress, Alert, Container,
+  Paper, Tabs, Tab,
+  AppBar, Toolbar, IconButton // Importa AppBar, Toolbar, IconButton
 } from '@mui/material';
+import Brightness4Icon from '@mui/icons-material/Brightness4'; // Ícone Lua (dark)
+import Brightness7Icon from '@mui/icons-material/Brightness7'; // Ícone Sol (light)
 import { useDatacenterData } from './hooks/useDatacenterData';
-import DatacenterDetailView from './components/DatacenterDetailView'; // <-- Sua view de detalhes
-import OverviewCards from './components/OverviewCards'; // <-- Componente dos cards
+import DatacenterDetailView from './views/DatacenterDetailView';
+import OverviewCards from './components/OverviewCards';
+import { useThemeContext } from './contexts/ThemeContext'; // Importa o hook do contexto
 
-// Definição do tema escuro (pode ser movida para src/theme.ts depois)
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: '#2196f3', // Azul padrão MUI
-    },
-    background: {
-      default: '#121212', // Fundo bem escuro
-      paper: '#1e1e1e',   // Fundo para Paper/Card/Tabs
-    },
-    // Cores semânticas para status (usadas no Card)
-    success: { main: '#66bb6a' },
-    warning: { main: '#ffa726' },
-    error: { main: '#f44336' },
-  },
-  // Futuras customizações (tipografia, espaçamentos, etc)
-});
-
-// Função auxiliar para props de acessibilidade das abas
+// Função a11yProps (mantida)
 function a11yProps(index: number) {
   return {
     id: `datacenter-tab-${index}`,
@@ -37,99 +22,90 @@ function a11yProps(index: number) {
 
 function App() {
   const { data: datacenters, loading, error } = useDatacenterData();
-  // Estado para controlar o índice da aba selecionada
   const [selectedTabIndex, setSelectedTabIndex] = useState<number>(0);
+  const { mode: themeMode, toggleThemeMode } = useThemeContext(); // Usa o contexto para pegar modo e função toggle
 
-  // Handler para atualizar o estado quando uma aba é clicada
   const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
     setSelectedTabIndex(newValue);
   };
 
   // --- Renderização ---
 
-  // 1. Carregando...
   if (loading) {
+    // Não precisa mais do ThemeProvider aqui, pois ele está em CustomThemeProvider
     return (
-      <ThemeProvider theme={darkTheme}>
-        <CssBaseline />
-        <Box display="flex" justifyContent="center" alignItems="center" minHeight="100vh">
-          <CircularProgress />
-        </Box>
-      </ThemeProvider>
+      <Box display="flex" justifyContent="center" alignItems="center" minHeight="100vh">
+        <CircularProgress />
+      </Box>
     );
   }
 
-  // 2. Erro no carregamento
   if (error) {
+    // Não precisa mais do ThemeProvider aqui
     return (
-      <ThemeProvider theme={darkTheme}>
-        <CssBaseline />
-        <Container maxWidth="lg" sx={{ py: 2 }}>
-          <Alert severity="error">Erro ao carregar dados: {error.message}</Alert>
-        </Container>
-      </ThemeProvider>
+      <Container maxWidth="lg" sx={{ py: 2 }}>
+        <Alert severity="error">Erro ao carregar dados: {error.message}</Alert>
+      </Container>
     );
   }
 
-  // 3. Dados carregados com sucesso
+  // --- Renderização Principal com Dados ---
   const selectedDatacenter = datacenters.length > 0 && selectedTabIndex < datacenters.length
     ? datacenters[selectedTabIndex]
     : null;
 
   return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <Container maxWidth="lg" sx={{ py: 2 }}>
-        {/* Título Principal */}
-        <Typography variant="h3" component="h1" gutterBottom align="center" sx={{ mb: 4, fontWeight: 'bold' }}>
-          Dashboard de IPs
-        </Typography>
+    // O CssBaseline já é aplicado pelo CustomThemeProvider
+    <> {/* Usa Fragment ou Box como wrapper direto se necessário */}
+      <AppBar position="sticky" elevation={1} sx={{ bgcolor: 'background.paper' }}>
+        <Toolbar variant="dense">
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'text.primary' }}>
+            Dashboard IPs
+          </Typography>
+          <IconButton sx={{ ml: 1 }} onClick={toggleThemeMode} color="inherit" aria-label="toggle theme">
+            {themeMode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
+        </Toolbar>
+      </AppBar>
 
-        {/* === Seção de Visão Geral (Cards) === */}
+      <Container maxWidth="lg" sx={{ py: 3 }}> {/* Ajusta padding top */}
+        {/* Título foi movido para o AppBar, ou pode ser mantido aqui se preferir */}
+        {/* <Typography variant="h3" component="h1" ... /> */}
+
         <OverviewCards datacenters={datacenters} />
 
-        {/* === Seção de Detalhes com Abas === */}
         {datacenters.length > 0 ? (
-          // Usamos Paper para agrupar visualmente as Abas e o Conteúdo
-          <Paper elevation={2} sx={{ mt: 2, overflow: 'hidden' }}> {/* elevation e overflow */}
+          <Paper elevation={2} sx={{ mt: 2, overflow: 'hidden' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: 'background.paper' }}>
               <Tabs
                 value={selectedTabIndex}
                 onChange={handleTabChange}
-                variant="scrollable" // Permite rolar horizontalmente
-                scrollButtons="auto" // Mostra botões de rolagem se necessário
+                variant="scrollable"
+                scrollButtons="auto"
                 aria-label="Abas dos Datacenters"
-              // Estilos adicionais para as abas se necessário via sx prop
+                indicatorColor="primary" // Garante que o indicador use a cor primária
+                textColor="primary" // Garante que o texto da aba selecionada use a cor primária
               >
                 {datacenters.map((dc, index) => (
-                  <Tab
-                    key={dc.name}
-                    label={dc.name}
-                    {...a11yProps(index)} // Props de acessibilidade
-                  />
+                  <Tab key={dc.name} label={dc.name} {...a11yProps(index)} />
                 ))}
               </Tabs>
             </Box>
-
-            {/* Área onde o conteúdo detalhado da aba selecionada é renderizado */}
-            <Box sx={{ p: { xs: 1, sm: 2, md: 3 } }}> {/* Padding responsivo */}
+            <Box sx={{ p: { xs: 1, sm: 2, md: 3 } }}>
               {selectedDatacenter ? (
                 <DatacenterDetailView datacenter={selectedDatacenter} />
               ) : (
-                // Mensagem caso algo dê errado com a seleção (não deve ocorrer normalmente)
                 <Typography align="center" sx={{ p: 3 }}>Selecione um datacenter.</Typography>
               )}
             </Box>
           </Paper>
         ) : (
-          // Mensagem se não houver datacenters após o carregamento
           <Typography align="center" sx={{ mt: 4 }} color="text.secondary">
             Nenhum dado de datacenter disponível para exibir detalhes.
           </Typography>
         )}
-
       </Container>
-    </ThemeProvider>
+    </>
   );
 }
 

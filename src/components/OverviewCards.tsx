@@ -1,5 +1,5 @@
 // src/components/OverviewCards.tsx
-import React from 'react';
+import React, { memo } from 'react';
 import { Grid, Box, Typography } from '@mui/material';
 import DatacenterCard from './DatacenterCard';
 import { ProcessedDatacenter } from '../types/datacenter';
@@ -33,4 +33,4 @@ const OverviewCards: React.FC<OverviewCardsProps> = ({ datacenters }) => {
   );
 };
 
-export default OverviewCards;
+export default memo(OverviewCards);

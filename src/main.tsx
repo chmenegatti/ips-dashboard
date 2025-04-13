@@ -1,10 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+// src/main.tsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+// Importações da Fonte Inter
+import '@fontsource/inter/300.css'; // Light (opcional)
+import '@fontsource/inter/400.css'; // Regular
+import '@fontsource/inter/500.css'; // Medium
+import '@fontsource/inter/700.css'; // Bold
+// Importe o ThemeProvider customizado que criaremos a seguir
+import CustomThemeProvider from './contexts/ThemeContext';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    {/* Envolvemos o App com nosso Provedor de Tema */}
+    <CustomThemeProvider>
+      <App />
+    </CustomThemeProvider>
+  </React.StrictMode>,
+);

@@ -1,5 +1,5 @@
 // src/components/DatacenterCard.tsx
-import React from 'react';
+import React, { memo } from 'react';
 import {
   Card, CardContent, Typography, Box, LinearProgress, useTheme, Chip
 } from '@mui/material';
@@ -65,4 +65,4 @@ const DatacenterCard: React.FC<DatacenterCardProps> = ({ datacenter }) => {
   );
 };
 
-export default DatacenterCard;
+export default memo(DatacenterCard);

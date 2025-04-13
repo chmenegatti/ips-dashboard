@@ -1,5 +1,5 @@
 // src/components/DatacenterPieChart.tsx
-import React from 'react';
+import React, { memo } from 'react';
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Box, Typography, Paper, useTheme } from '@mui/material';
 import { AggregatedStats } from '../types/datacenter';
@@ -121,4 +121,4 @@ const DatacenterPieChart: React.FC<DatacenterPieChartProps> = ({ stats }) => {
   );
 };
 
-export default DatacenterPieChart;
+export default memo(DatacenterPieChart);
