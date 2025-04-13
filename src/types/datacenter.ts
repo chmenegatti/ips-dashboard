@@ -62,3 +62,37 @@ export interface ProcessedDatacenter {
   publicIPs: PublicIpDetail[];
   rawData: DatacenterRawData; // Opcional: manter dados brutos se necessário
 }
+
+// Interface para uma entrada individual de Floating IP
+export interface FloatingIpEntry {
+  Id: string;
+  Description: string;
+  IpRange: string;
+  Prefix: string;
+}
+
+// Interface/Tipo para o objeto Floatings (chaves dinâmicas para grupos)
+// Ex: { "floating-dbc": FloatingIpEntry[], "floating-lb": FloatingIpEntry[] }
+export type FloatingIpGroups = {
+  [groupKey: string]: FloatingIpEntry[];
+};
+
+// Adiciona a propriedade opcional 'Floatings' à interface dos dados brutos
+export interface DatacenterRawData {
+  EdgeClusters: EdgeClusterItem[];
+  Floatings?: FloatingIpGroups; // <-- ADICIONADO AQUI (opcional)
+}
+
+// Interface para um Floating IP processado (inclui nome do grupo)
+export interface ProcessedFloatingIp extends FloatingIpEntry {
+  groupName: string; // Nome do grupo (ex: "floating-dbc")
+}
+
+// Adiciona a propriedade 'floatingIPs' à interface dos dados processados
+export interface ProcessedDatacenter {
+  name: string;
+  aggregatedStats: AggregatedStats;
+  publicIPs: PublicIpDetail[];
+  floatingIPs: ProcessedFloatingIp[]; // <-- ADICIONADO AQUI
+  rawData: DatacenterRawData;
+}

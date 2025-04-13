@@ -6,7 +6,10 @@ import {
   ProcessedDatacenter,
   PublicIpDetail,
   PublicAddress,
-  ClusterData, // Importa o tipo ClusterData atualizado
+  ClusterData,
+  FloatingIpGroups,
+  FloatingIpEntry,
+  ProcessedFloatingIp, // Importa o tipo ClusterData atualizado
 } from '../types/datacenter'; // Ajuste o caminho se necessário
 
 // Carrega os módulos JSON de forma 'eager' (imediata, incluídos no build)
@@ -23,6 +26,7 @@ function processSingleDatacenter(name: string, data: DatacenterRawData): Process
   let aggregatedTotal = 0;
   let aggregatedUsed = 0;
   const publicIPs: PublicIpDetail[] = [];
+  const floatingIPs: ProcessedFloatingIp[] = [];
 
   data.EdgeClusters.forEach((clusterItem: EdgeClusterItem) => {
     const clusterName = Object.keys(clusterItem)[0];
@@ -57,6 +61,30 @@ function processSingleDatacenter(name: string, data: DatacenterRawData): Process
     }
   });
 
+  if (data.Floatings) { // Verifica se a chave Floatings existe
+    const floatingGroups: FloatingIpGroups = data.Floatings;
+    // Itera sobre as chaves dinâmicas dos grupos (ex: "floating-dbc")
+    for (const groupName in floatingGroups) {
+      if (Object.prototype.hasOwnProperty.call(floatingGroups, groupName)) {
+        const groupEntries: FloatingIpEntry[] = floatingGroups[groupName];
+        // Itera sobre as entradas dentro de cada grupo
+        groupEntries.forEach(entry => {
+          floatingIPs.push({
+            ...entry,
+            groupName: groupName, // Adiciona o nome do grupo ao objeto processado
+          });
+        });
+      }
+    }
+    // Ordena os floating IPs pelo nome do grupo e talvez pela descrição/IP para consistência
+    floatingIPs.sort((a, b) => {
+      if (a.groupName !== b.groupName) {
+        return a.groupName.localeCompare(b.groupName);
+      }
+      return (a.Description + a.IpRange).localeCompare(b.Description + b.IpRange);
+    });
+  }
+
   const aggregatedFree = aggregatedTotal - aggregatedUsed;
   const utilization = aggregatedTotal > 0 ? (aggregatedUsed / aggregatedTotal) * 100 : 0;
 
@@ -69,6 +97,7 @@ function processSingleDatacenter(name: string, data: DatacenterRawData): Process
       utilization: parseFloat(utilization.toFixed(1)),
     },
     publicIPs,
+    floatingIPs,
     rawData: data,
   };
 }

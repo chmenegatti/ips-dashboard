@@ -5,6 +5,7 @@ import { Box, Typography, Grid } from '@mui/material';
 import { ProcessedDatacenter } from '../types/datacenter';
 import DatacenterPieChart from '../components/DatacenterPieChart';
 import DatacenterPublicIpTable from '../components/DatacenterPublicIpTable';
+import FloatingIpTable from '../components/FloatingIpTable';
 
 interface DatacenterDetailViewProps {
   datacenter: ProcessedDatacenter;
@@ -37,6 +38,10 @@ const DatacenterDetailView: React.FC<DatacenterDetailViewProps> = ({ datacenter 
         {/* --- FIM DA CORREÇÃO --- */}
 
       </Grid>
+
+      {/* --- ADICIONA A NOVA TABELA DE FLOATING IPS ABAIXO --- */}
+      <FloatingIpTable floatingIPs={datacenter.floatingIPs} />
+      {/* --- FIM DA ADIÇÃO --- */}
     </Box>
   );
 };
