@@ -1,0 +1,280 @@
+{
+  "EdgeClusters": [
+    {
+      "T0-Cluster_1": {
+        "Free": 163,
+        "Total": 438,
+        "Used": 275,
+        "VirtualFirewall": "virtual-1",
+        "public_T0-Cluster_1": {
+          "Public_Address": [
+            {
+              "Id": "7182edb9-a6fb-4ca7-b93f-7da9ecca0c09",
+              "Address": "181.41.169.64",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 62,
+              "Free": 0
+            },
+            {
+              "Id": "71cd3ed7-85ac-427f-95e1-18395bb3eb0b",
+              "Address": "181.41.169.128",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 106,
+              "Free": 20
+            },
+            {
+              "Id": "2adc4601-ab2c-4dd0-9626-36a65509fc53",
+              "Address": "181.41.170.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 86,
+              "Free": 40
+            },
+            {
+              "Id": "df2659b4-4be8-4ab2-847a-e119576796ee",
+              "Address": "181.41.170.128",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 17,
+              "Free": 45
+            },
+            {
+              "Id": "0cba9da4-d399-11ec-94ad-0050569380ab",
+              "Address": "45.6.153.128",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 4,
+              "Free": 58
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_1_PA2": {
+        "Free": 81,
+        "Total": 312,
+        "Used": 231,
+        "VirtualFirewall": "fortinet-2",
+        "public_T0-Cluster_2": {
+          "Public_Address": [
+            {
+              "Id": "431ebfb7-2034-4f73-ba6b-83a345a515c0",
+              "Address": "181.41.170.192",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 62,
+              "Free": 0
+            },
+            {
+              "Id": "291198e8-02e4-47b3-8094-38eece8b783c",
+              "Address": "45.6.153.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 118,
+              "Free": 8
+            },
+            {
+              "Id": "172f278f-d399-11ec-94ad-0050569380ab",
+              "Address": "45.6.153.192",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 51,
+              "Free": 11
+            },
+            {
+              "Id": "737d1572-eea0-11ec-99cf-005056936fa0",
+              "Address": "187.94.55.192",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 0,
+              "Free": 62
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_1_FG3": {
+        "Free": 86,
+        "Total": 314,
+        "Used": 228,
+        "VirtualFirewall": "fortinet",
+        "public_T0-Cluster_1_FG3": {
+          "Public_Address": [
+            {
+              "Id": "119228fd-ee8b-11ec-94ad-0050569380ab",
+              "Address": "187.94.55.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 112,
+              "Free": 14
+            },
+            {
+              "Id": "59424471-1202-426c-b565-c46e5094eba5",
+              "Address": "189.126.156.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 105,
+              "Free": 21
+            },
+            {
+              "Id": "cb68ad3a-ea98-47b5-98ec-4b875e20c52a",
+              "Address": "187.94.55.128",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 11,
+              "Free": 51
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_1-vrf_FG4": {
+        "Free": 63,
+        "Total": 156,
+        "Used": 93,
+        "VirtualFirewall": "fortinet",
+        "public_T0-Cluster_1-vrf_FG4": {
+          "Public_Address": [
+            {
+              "Id": "f942c7b3-0e1a-4ab8-9524-63d79ec6bed9",
+              "Address": "189.126.156.128",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 89,
+              "Free": 37
+            },
+            {
+              "Id": "1057d0b9-ed01-457e-9cca-b48362747d2a",
+              "Address": "201.157.227.0",
+              "Prefix": "27",
+              "Total": 30,
+              "Used": 4,
+              "Free": 26
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_2": {
+        "Free": 86,
+        "Total": 316,
+        "Used": 230,
+        "VirtualFirewall": "fortinet-1",
+        "public_T0-Cluster_2_FG": {
+          "Public_Address": [
+            {
+              "Id": "357a6d1d-728d-4901-bd7c-61f769923571",
+              "Address": "201.157.225.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 229,
+              "Free": 25
+            },
+            {
+              "Id": "de24ce72-85ae-11ef-94ad-0050569380ab",
+              "Address": "201.157.227.32",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 1,
+              "Free": 61
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_2-vrf_1": {
+        "Free": 224,
+        "Total": 254,
+        "Used": 30,
+        "VirtualFirewall": "fortinet-1",
+        "public_T0-Cluster_2-vrf_1": {
+          "Public_Address": [
+            {
+              "Id": "6173a55e-3406-41f6-817d-62052d9cb839",
+              "Address": "201.157.226.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 30,
+              "Free": 224
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_2-vrf_2": {
+        "Free": 26,
+        "Total": 30,
+        "Used": 4,
+        "VirtualFirewall": "fortinet-1",
+        "public_T0-Cluster_2-vrf_2": {
+          "Public_Address": [
+            {
+              "Id": "1057d0b9-ed01-457e-9cca-b48362747d2a",
+              "Address": "201.157.227.0",
+              "Prefix": "27",
+              "Total": 30,
+              "Used": 4,
+              "Free": 26
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "Floatings": {
+    "floating-dbc": [
+      {
+        "Id": "1b37ea57-f605-4e85-a4b1-ef267b8d7f52",
+        "Description": "Floating IP Banco Compartilhado",
+        "IpRange": "172.16.192.0",
+        "Prefix": "20"
+      }
+    ],
+    "floating-dbd": [
+      {
+        "Id": "3dbb8d4f-6d4e-4ea5-94b8-8b0eaf4ab1e7",
+        "Description": "Floating IP Banco Dedicado",
+        "IpRange": "172.16.224.0",
+        "Prefix": "19"
+      }
+    ],
+    "floating-lb": [
+      {
+        "Id": "1fe35aa0-c51a-4ca3-88f3-4882ce761cf7",
+        "Description": "Floating IP Load Balancer",
+        "IpRange": "172.16.128.0",
+        "Prefix": "19"
+      }
+    ],
+    "floating-tks": [
+      {
+        "Id": "68980cc2-d37d-442b-9e74-f9b9577db3a5",
+        "Description": "Floating IP TKS",
+        "IpRange": "172.16.126.0",
+        "Prefix": "23"
+      }
+    ],
+    "floating-vm": [
+      {
+        "Id": "3f775423-6264-4f0a-944e-cb6bbb0ae13b",
+        "Description": "Floating IP VM",
+        "IpRange": "172.16.0.0",
+        "Prefix": "18"
+      },
+      {
+        "Id": "696bfc65-818e-11ef-b0be-005056936fa0",
+        "Description": "Floating IP VM",
+        "IpRange": "172.16.64.0",
+        "Prefix": "19"
+      }
+    ]
+  }
+}

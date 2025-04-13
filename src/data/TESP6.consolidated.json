@@ -1,0 +1,336 @@
+{
+  "EdgeClusters": [
+    {
+      "T0-Cluster_1": {
+        "Free": 50,
+        "Total": 440,
+        "Used": 390,
+        "VirtualFirewall": "fortinet",
+        "public_T0-Cluster_1": {
+          "Public_Address": [
+            {
+              "Id": "ced9c715-33c5-11ef-936f-005056b21f3a",
+              "Address": "177.136.10.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 251,
+              "Free": 3
+            },
+            {
+              "Id": "e14fe3d8-6fbb-11ef-8c88-005056b28669",
+              "Address": "201.157.245.0",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 60,
+              "Free": 2
+            },
+            {
+              "Id": "596f0bb0-b2a5-11ef-be16-005056b21f3a",
+              "Address": "201.157.245.64",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 54,
+              "Free": 8
+            },
+            {
+              "Id": "5ee571be-dea7-11ef-8d5f-005056b2c1a9",
+              "Address": "201.157.245.128",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 25,
+              "Free": 37
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_1-vrf_1": {
+        "Free": 39,
+        "Total": 254,
+        "Used": 215,
+        "VirtualFirewall": "fortinet",
+        "public_T0-Cluster_2": {
+          "Public_Address": [
+            {
+              "Id": "db982f90-33c9-11ef-90a6-005056b2c1a9",
+              "Address": "177.136.11.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 215,
+              "Free": 39
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_1-vrf_2": {
+        "Free": 69,
+        "Total": 254,
+        "Used": 185,
+        "VirtualFirewall": "fortinet",
+        "public_T0-Cluster_3": {
+          "Public_Address": [
+            {
+              "Id": "0413dfac-33f4-11ef-90a6-005056b2c1a9",
+              "Address": "201.157.198.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 185,
+              "Free": 69
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_2": {
+        "Free": 45,
+        "Total": 254,
+        "Used": 209,
+        "VirtualFirewall": "fortinet-2",
+        "public_T0-Cluster_4": {
+          "Public_Address": [
+            {
+              "Id": "2fda6874-33df-11ef-b7bb-005056b28669",
+              "Address": "201.157.211.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 209,
+              "Free": 45
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_2-vrf_1": {
+        "Free": 59,
+        "Total": 316,
+        "Used": 257,
+        "VirtualFirewall": "fortinet-2",
+        "public_T0-Cluster_5": {
+          "Public_Address": [
+            {
+              "Id": "7a40ec62-33ce-11ef-936f-005056b21f3a",
+              "Address": "201.157.213.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 253,
+              "Free": 1
+            },
+            {
+              "Id": "2711ec45-09b0-11f0-8d5f-005056b2c1a9",
+              "Address": "201.157.245.192",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 4,
+              "Free": 58
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_2-vrf_2": {
+        "Free": 36,
+        "Total": 254,
+        "Used": 218,
+        "VirtualFirewall": "fortinet-2",
+        "public_T0-Cluster_6": {
+          "Public_Address": [
+            {
+              "Id": "b2620a9f-97ca-11ef-8c88-005056b28669",
+              "Address": "201.157.216.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 218,
+              "Free": 36
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_3": {
+        "Free": 252,
+        "Total": 254,
+        "Used": 2,
+        "VirtualFirewall": "fortinet-3",
+        "public_T0-Cluster_7": {
+          "Public_Address": [
+            {
+              "Id": "92bfd1eb-ea77-11ef-8c88-005056b28669",
+              "Address": "201.157.219.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 2,
+              "Free": 252
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_3-vrf_1": {
+        "Free": 254,
+        "Total": 254,
+        "Used": 0,
+        "VirtualFirewall": "fortinet-3",
+        "public_T0-Cluster_8": {
+          "Public_Address": [
+            {
+              "Id": "958edf96-ea77-11ef-8c88-005056b28669",
+              "Address": "201.157.221.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 0,
+              "Free": 254
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_3-vrf_2": {
+        "Free": 245,
+        "Total": 254,
+        "Used": 9,
+        "VirtualFirewall": "fortinet-3",
+        "public_T0-Cluster_9": {
+          "Public_Address": [
+            {
+              "Id": "96988167-ea77-11ef-8c88-005056b28669",
+              "Address": "201.157.230.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 9,
+              "Free": 245
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "Floatings": {
+    "floating-dbc": [
+      {
+        "Id": "35d064ef-33ea-11ef-b7bb-005056b28669",
+        "Description": "Floating IP Banco Compartilhado",
+        "IpRange": "10.115.192.0",
+        "Prefix": "19"
+      }
+    ],
+    "floating-dbd": [
+      {
+        "Id": "3226a12e-33ea-11ef-b7bb-005056b28669",
+        "Description": "Floating IP Banco Dedicado",
+        "IpRange": "10.115.224.0",
+        "Prefix": "20"
+      },
+      {
+        "Id": "c5d2abd2-7b80-11ef-8d5f-005056b2c1a9",
+        "Description": "Floating IP Banco Dedicado",
+        "IpRange": "10.115.240.0",
+        "Prefix": "21"
+      },
+      {
+        "Id": "c5d2b0ff-7b80-11ef-8d5f-005056b2c1a9",
+        "Description": "Floating IP Banco Dedicado",
+        "IpRange": "10.115.248.0",
+        "Prefix": "22"
+      },
+      {
+        "Id": "c5d2b1b4-7b80-11ef-8d5f-005056b2c1a9",
+        "Description": "Floating IP Banco Dedicado",
+        "IpRange": "10.115.252.0",
+        "Prefix": "23"
+      }
+    ],
+    "floating-lb": [
+      {
+        "Id": "2b51d35e-33ea-11ef-b7bb-005056b28669",
+        "Description": "Floating IP Load Balancer",
+        "IpRange": "10.115.128.0",
+        "Prefix": "18"
+      }
+    ],
+    "floating-tks": [
+      {
+        "Id": "399b99a7-33ea-11ef-b7bb-005056b28669",
+        "Description": "Floating IP TKS",
+        "IpRange": "10.115.126.0",
+        "Prefix": "23"
+      }
+    ],
+    "floating-vm": [
+      {
+        "Id": "e6d92ed6-3aef-11ef-936f-005056b21f3a",
+        "Description": "Floating IP VM",
+        "IpRange": "10.115.1.0",
+        "Prefix": "24"
+      },
+      {
+        "Id": "15ca672f-3af0-11ef-936f-005056b21f3a",
+        "Description": "Floating IP VM",
+        "IpRange": "10.115.2.0",
+        "Prefix": "23"
+      },
+      {
+        "Id": "3553b68f-3af0-11ef-936f-005056b21f3a",
+        "Description": "Floating IP VM",
+        "IpRange": "10.115.4.0",
+        "Prefix": "22"
+      },
+      {
+        "Id": "56792ec2-3af0-11ef-936f-005056b21f3a",
+        "Description": "Floating IP VM",
+        "IpRange": "10.115.8.0",
+        "Prefix": "21"
+      },
+      {
+        "Id": "74ea4998-3af0-11ef-936f-005056b21f3a",
+        "Description": "Floating IP VM",
+        "IpRange": "10.115.16.0",
+        "Prefix": "20"
+      },
+      {
+        "Id": "8d15b19e-3af0-11ef-936f-005056b21f3a",
+        "Description": "Floating IP VM",
+        "IpRange": "10.115.32.0",
+        "Prefix": "19"
+      },
+      {
+        "Id": "aa4dcc5e-3af0-11ef-936f-005056b21f3a",
+        "Description": "Floating IP VM",
+        "IpRange": "10.115.64.0",
+        "Prefix": "19"
+      },
+      {
+        "Id": "c8f27466-3af0-11ef-936f-005056b21f3a",
+        "Description": "Floating IP VM",
+        "IpRange": "10.115.96.0",
+        "Prefix": "20"
+      },
+      {
+        "Id": "ec374cd1-3af0-11ef-936f-005056b21f3a",
+        "Description": "Floating IP VM",
+        "IpRange": "10.115.112.0",
+        "Prefix": "21"
+      },
+      {
+        "Id": "117cdcff-3af1-11ef-936f-005056b21f3a",
+        "Description": "Floating IP VM",
+        "IpRange": "10.115.120.0",
+        "Prefix": "22"
+      },
+      {
+        "Id": "6d27f5eb-3af1-11ef-936f-005056b21f3a",
+        "Description": "Floating IP VM",
+        "IpRange": "10.115.124.0",
+        "Prefix": "23"
+      }
+    ]
+  }
+}

@@ -1,0 +1,768 @@
+{
+  "EdgeClusters": [
+    {
+      "T0-Cluster_1": {
+        "Free": 117,
+        "Total": 2030,
+        "Used": 1913,
+        "VirtualFirewall": "virtual-1",
+        "public_T0-Cluster_1": {
+          "Public_Address": [
+            {
+              "Id": "12cc0896-acb5-420e-953b-1b5edecf07a5",
+              "Address": "181.41.177.128",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 125,
+              "Free": 1
+            },
+            {
+              "Id": "4d440d34-119a-4af7-b596-599906a3de68",
+              "Address": "181.41.178.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 254,
+              "Free": 0
+            },
+            {
+              "Id": "f898ce17-00ee-4125-9758-4383aeae3938",
+              "Address": "181.41.179.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 252,
+              "Free": 2
+            },
+            {
+              "Id": "d218a445-cb53-4426-9c66-aacfe8951a7b",
+              "Address": "181.41.180.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 253,
+              "Free": 1
+            },
+            {
+              "Id": "559d0d74-8ac8-4369-999a-e1a28a0d6645",
+              "Address": "181.41.181.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 243,
+              "Free": 11
+            },
+            {
+              "Id": "65d7fbbb-5907-466f-b30f-ff6958067e19",
+              "Address": "181.41.187.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 242,
+              "Free": 12
+            },
+            {
+              "Id": "ed09ef16-f5b0-4814-b4f4-d53a2da8e15f",
+              "Address": "181.41.188.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 247,
+              "Free": 7
+            },
+            {
+              "Id": "3152ed9f-b0c9-4b9d-980d-c8ab0ad88360",
+              "Address": "181.41.189.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 218,
+              "Free": 36
+            },
+            {
+              "Id": "1f493bb0-637d-4fe4-8168-0f085d6c8aae",
+              "Address": "181.41.190.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 79,
+              "Free": 47
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_2": {
+        "Free": 256,
+        "Total": 2120,
+        "Used": 1864,
+        "VirtualFirewall": "virtual-2",
+        "public_T0-Cluster_2": {
+          "Public_Address": [
+            {
+              "Id": "589e646c-efe3-4628-89a7-e0ae61c35ab0",
+              "Address": "181.41.182.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 254,
+              "Free": 0
+            },
+            {
+              "Id": "f3e30732-18aa-43b8-ace3-799949bb3171",
+              "Address": "181.41.183.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 254,
+              "Free": 0
+            },
+            {
+              "Id": "6526cfe1-e915-4baa-8442-15619e67ef86",
+              "Address": "181.41.184.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 252,
+              "Free": 2
+            },
+            {
+              "Id": "77ba89e8-117a-43b9-bc2a-a3807924504a",
+              "Address": "181.41.185.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 254,
+              "Free": 0
+            },
+            {
+              "Id": "c000d3eb-ecf2-4f81-bb7a-079349cbd5ca",
+              "Address": "181.41.186.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 254,
+              "Free": 0
+            },
+            {
+              "Id": "669e9039-a690-45b8-aa08-24da682c0930",
+              "Address": "181.41.191.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 229,
+              "Free": 25
+            },
+            {
+              "Id": "b58cdb03-c136-4b7f-a249-b677a1eaa0af",
+              "Address": "181.41.190.128",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 86,
+              "Free": 40
+            },
+            {
+              "Id": "288dde18-9ec5-445a-9835-ca5d1e06e2df",
+              "Address": "181.41.171.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 83,
+              "Free": 43
+            },
+            {
+              "Id": "aa2b6af2-2899-4563-9a19-b7810fd546b9",
+              "Address": "181.41.171.128",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 91,
+              "Free": 35
+            },
+            {
+              "Id": "ffd2c62a-b377-43b8-9ada-42ee0e2f3178",
+              "Address": "181.41.172.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 80,
+              "Free": 46
+            },
+            {
+              "Id": "e59bb0ef-9dcb-49d0-b0b9-fa15621eede0",
+              "Address": "181.41.176.32",
+              "Prefix": "27",
+              "Total": 30,
+              "Used": 20,
+              "Free": 10
+            },
+            {
+              "Id": "c3917b5e-844c-4c39-afb2-c5a885545676",
+              "Address": "187.94.49.0",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 7,
+              "Free": 55
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_3": {
+        "Free": 117,
+        "Total": 2030,
+        "Used": 1913,
+        "VirtualFirewall": "virtual-1",
+        "public_T0-Cluster_1": {
+          "Public_Address": [
+            {
+              "Id": "12cc0896-acb5-420e-953b-1b5edecf07a5",
+              "Address": "181.41.177.128",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 125,
+              "Free": 1
+            },
+            {
+              "Id": "4d440d34-119a-4af7-b596-599906a3de68",
+              "Address": "181.41.178.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 254,
+              "Free": 0
+            },
+            {
+              "Id": "f898ce17-00ee-4125-9758-4383aeae3938",
+              "Address": "181.41.179.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 252,
+              "Free": 2
+            },
+            {
+              "Id": "d218a445-cb53-4426-9c66-aacfe8951a7b",
+              "Address": "181.41.180.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 253,
+              "Free": 1
+            },
+            {
+              "Id": "559d0d74-8ac8-4369-999a-e1a28a0d6645",
+              "Address": "181.41.181.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 243,
+              "Free": 11
+            },
+            {
+              "Id": "65d7fbbb-5907-466f-b30f-ff6958067e19",
+              "Address": "181.41.187.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 242,
+              "Free": 12
+            },
+            {
+              "Id": "ed09ef16-f5b0-4814-b4f4-d53a2da8e15f",
+              "Address": "181.41.188.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 247,
+              "Free": 7
+            },
+            {
+              "Id": "3152ed9f-b0c9-4b9d-980d-c8ab0ad88360",
+              "Address": "181.41.189.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 218,
+              "Free": 36
+            },
+            {
+              "Id": "1f493bb0-637d-4fe4-8168-0f085d6c8aae",
+              "Address": "181.41.190.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 79,
+              "Free": 47
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_3-vrf_PA2": {
+        "Free": 256,
+        "Total": 2120,
+        "Used": 1864,
+        "VirtualFirewall": "virtual-2",
+        "public_T0-Cluster_2": {
+          "Public_Address": [
+            {
+              "Id": "589e646c-efe3-4628-89a7-e0ae61c35ab0",
+              "Address": "181.41.182.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 254,
+              "Free": 0
+            },
+            {
+              "Id": "f3e30732-18aa-43b8-ace3-799949bb3171",
+              "Address": "181.41.183.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 254,
+              "Free": 0
+            },
+            {
+              "Id": "6526cfe1-e915-4baa-8442-15619e67ef86",
+              "Address": "181.41.184.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 252,
+              "Free": 2
+            },
+            {
+              "Id": "77ba89e8-117a-43b9-bc2a-a3807924504a",
+              "Address": "181.41.185.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 254,
+              "Free": 0
+            },
+            {
+              "Id": "c000d3eb-ecf2-4f81-bb7a-079349cbd5ca",
+              "Address": "181.41.186.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 254,
+              "Free": 0
+            },
+            {
+              "Id": "669e9039-a690-45b8-aa08-24da682c0930",
+              "Address": "181.41.191.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 229,
+              "Free": 25
+            },
+            {
+              "Id": "b58cdb03-c136-4b7f-a249-b677a1eaa0af",
+              "Address": "181.41.190.128",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 86,
+              "Free": 40
+            },
+            {
+              "Id": "288dde18-9ec5-445a-9835-ca5d1e06e2df",
+              "Address": "181.41.171.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 83,
+              "Free": 43
+            },
+            {
+              "Id": "aa2b6af2-2899-4563-9a19-b7810fd546b9",
+              "Address": "181.41.171.128",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 91,
+              "Free": 35
+            },
+            {
+              "Id": "ffd2c62a-b377-43b8-9ada-42ee0e2f3178",
+              "Address": "181.41.172.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 80,
+              "Free": 46
+            },
+            {
+              "Id": "e59bb0ef-9dcb-49d0-b0b9-fa15621eede0",
+              "Address": "181.41.176.32",
+              "Prefix": "27",
+              "Total": 30,
+              "Used": 20,
+              "Free": 10
+            },
+            {
+              "Id": "c3917b5e-844c-4c39-afb2-c5a885545676",
+              "Address": "187.94.49.0",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 7,
+              "Free": 55
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_3-vrf_PA3": {
+        "Free": 232,
+        "Total": 1136,
+        "Used": 904,
+        "VirtualFirewall": "virtual-3",
+        "public_T0-Cluster_3": {
+          "Public_Address": [
+            {
+              "Id": "a325c72b-d8e3-4f88-87cb-e1e52203ec6d",
+              "Address": "181.41.172.128",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 125,
+              "Free": 1
+            },
+            {
+              "Id": "9ddbaf94-5dd3-498e-9300-8fc4f668a74c",
+              "Address": "181.41.173.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 125,
+              "Free": 1
+            },
+            {
+              "Id": "257eeab8-0c6c-47f3-b611-e21aadc277a5",
+              "Address": "181.41.173.128",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 104,
+              "Free": 22
+            },
+            {
+              "Id": "1b3e61d8-7e43-475d-a456-83b47937d1b9",
+              "Address": "138.219.91.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 209,
+              "Free": 45
+            },
+            {
+              "Id": "87a0ac97-b496-44d4-a8e8-f88cb433de3e",
+              "Address": "138.219.90.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 229,
+              "Free": 25
+            },
+            {
+              "Id": "eb6e2f26-4229-4c4e-a212-d21455aadc93",
+              "Address": "45.6.152.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 98,
+              "Free": 28
+            },
+            {
+              "Id": "29298008-d643-4d36-9f9b-9b64e6b5eca3",
+              "Address": "187.94.49.64",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 14,
+              "Free": 48
+            },
+            {
+              "Id": "9fe1b6d6-a57b-4043-93f7-ecfd9ea6e271",
+              "Address": "189.126.157.0",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 0,
+              "Free": 62
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_4": {
+        "Free": 232,
+        "Total": 1136,
+        "Used": 904,
+        "VirtualFirewall": "virtual-3",
+        "public_T0-Cluster_3": {
+          "Public_Address": [
+            {
+              "Id": "a325c72b-d8e3-4f88-87cb-e1e52203ec6d",
+              "Address": "181.41.172.128",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 125,
+              "Free": 1
+            },
+            {
+              "Id": "9ddbaf94-5dd3-498e-9300-8fc4f668a74c",
+              "Address": "181.41.173.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 125,
+              "Free": 1
+            },
+            {
+              "Id": "257eeab8-0c6c-47f3-b611-e21aadc277a5",
+              "Address": "181.41.173.128",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 104,
+              "Free": 22
+            },
+            {
+              "Id": "1b3e61d8-7e43-475d-a456-83b47937d1b9",
+              "Address": "138.219.91.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 209,
+              "Free": 45
+            },
+            {
+              "Id": "87a0ac97-b496-44d4-a8e8-f88cb433de3e",
+              "Address": "138.219.90.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 229,
+              "Free": 25
+            },
+            {
+              "Id": "eb6e2f26-4229-4c4e-a212-d21455aadc93",
+              "Address": "45.6.152.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 98,
+              "Free": 28
+            },
+            {
+              "Id": "29298008-d643-4d36-9f9b-9b64e6b5eca3",
+              "Address": "187.94.49.64",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 14,
+              "Free": 48
+            },
+            {
+              "Id": "9fe1b6d6-a57b-4043-93f7-ecfd9ea6e271",
+              "Address": "189.126.157.0",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 0,
+              "Free": 62
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_5": {
+        "Free": 145,
+        "Total": 724,
+        "Used": 579,
+        "VirtualFirewall": "fortinet",
+        "public_T0-Cluster_4": {
+          "Public_Address": [
+            {
+              "Id": "779bb281-633e-451a-b4a1-d2dba0a47153",
+              "Address": "189.126.132.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 254,
+              "Free": 0
+            },
+            {
+              "Id": "fa3b3478-2eec-491b-9cef-6444f249cb02",
+              "Address": "189.126.133.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 233,
+              "Free": 21
+            },
+            {
+              "Id": "048d8d38-f969-4319-84bc-a60425841a3b",
+              "Address": "187.94.49.128",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 36,
+              "Free": 26
+            },
+            {
+              "Id": "8b84979c-d951-4070-9e31-1103f4514e89",
+              "Address": "187.94.49.192",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 34,
+              "Free": 28
+            },
+            {
+              "Id": "bd865f3b-d5d9-11ee-8f4f-005056bfcdde",
+              "Address": "189.126.157.192",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 22,
+              "Free": 40
+            },
+            {
+              "Id": "526ec155-f090-11ee-b4b5-005056bf4891",
+              "Address": "177.136.42.128",
+              "Prefix": "27",
+              "Total": 30,
+              "Used": 0,
+              "Free": 30
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_5-vrf_FG1": {
+        "Free": 256,
+        "Total": 660,
+        "Used": 404,
+        "VirtualFirewall": "fortinet",
+        "public_T0-Cluster_5": {
+          "Public_Address": [
+            {
+              "Id": "8ed21087-81ba-40c7-af1d-afd44c7220da",
+              "Address": "189.126.134.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 216,
+              "Free": 38
+            },
+            {
+              "Id": "862038df-e3dd-4837-8060-5697c56858ed",
+              "Address": "189.126.135.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 71,
+              "Free": 55
+            },
+            {
+              "Id": "2c5da76c-148b-49e9-97e1-c14efcb53d59",
+              "Address": "189.126.135.128",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 40,
+              "Free": 86
+            },
+            {
+              "Id": "7a51c80b-8f1d-11ee-8f4f-005056bfcdde",
+              "Address": "189.126.157.64",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 25,
+              "Free": 37
+            },
+            {
+              "Id": "e305564e-ba5f-11ee-b4b5-005056bf4891",
+              "Address": "189.126.157.128",
+              "Prefix": "26",
+              "Total": 62,
+              "Used": 43,
+              "Free": 19
+            },
+            {
+              "Id": "696c270d-f090-11ee-b4b5-005056bf4891",
+              "Address": "177.136.42.160",
+              "Prefix": "27",
+              "Total": 30,
+              "Used": 9,
+              "Free": 21
+            }
+          ]
+        }
+      }
+    },
+    {
+      "T0-Cluster_5-vrf_FG2": {
+        "Free": 305,
+        "Total": 634,
+        "Used": 329,
+        "VirtualFirewall": "fortinet",
+        "public_T0-Cluster_6": {
+          "Public_Address": [
+            {
+              "Id": "0a6c88f6-8082-42c9-a13c-6d207017e64b",
+              "Address": "189.126.158.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 240,
+              "Free": 14
+            },
+            {
+              "Id": "24ebeaa4-d5da-11ee-8f4f-005056bfcdde",
+              "Address": "177.136.46.0",
+              "Prefix": "24",
+              "Total": 254,
+              "Used": 89,
+              "Free": 165
+            },
+            {
+              "Id": "795d2e08-f090-11ee-b4b5-005056bf4891",
+              "Address": "177.136.42.0",
+              "Prefix": "25",
+              "Total": 126,
+              "Used": 0,
+              "Free": 126
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "Floatings": {
+    "floating-dbc": [
+      {
+        "Id": "1b37ea57-f605-4e85-a4b1-ef267b8d7f52",
+        "Description": "Floating IP Banco Compartilhado",
+        "IpRange": "172.16.192.0",
+        "Prefix": "19"
+      }
+    ],
+    "floating-dbd": [
+      {
+        "Id": "3dbb8d4f-6d4e-4ea5-94b8-8b0eaf4ab1e7",
+        "Description": "Floating IP Banco Dedicado",
+        "IpRange": "172.16.224.0",
+        "Prefix": "20"
+      },
+      {
+        "Id": "15645e90-7b75-11ef-b4b5-005056bf4891",
+        "Description": "Floating IP Banco Dedicado",
+        "IpRange": "172.16.240.0",
+        "Prefix": "21"
+      },
+      {
+        "Id": "15646bb5-7b75-11ef-b4b5-005056bf4891",
+        "Description": "Floating IP Banco Dedicado",
+        "IpRange": "172.16.248.0",
+        "Prefix": "22"
+      },
+      {
+        "Id": "15646c41-7b75-11ef-b4b5-005056bf4891",
+        "Description": "Floating IP Banco Dedicado",
+        "IpRange": "172.16.252.0",
+        "Prefix": "23"
+      }
+    ],
+    "floating-lb": [
+      {
+        "Id": "1fe35aa0-c51a-4ca3-88f3-4882ce761cf7",
+        "Description": "Floating IP Load Balancer",
+        "IpRange": "172.16.128.0",
+        "Prefix": "18"
+      }
+    ],
+    "floating-tks": [
+      {
+        "Id": "68980cc2-d37d-442b-9e74-f9b9577db3a5",
+        "Description": "Floating IP TKS",
+        "IpRange": "172.16.126.0",
+        "Prefix": "23"
+      }
+    ],
+    "floating-vm": [
+      {
+        "Id": "3f775423-6264-4f0a-944e-cb6bbb0ae13b",
+        "Description": "Floating IP VM",
+        "IpRange": "172.16.0.0",
+        "Prefix": "18"
+      },
+      {
+        "Id": "db526048-7b78-11ef-b4b5-005056bf4891",
+        "Description": "Floating IP VM",
+        "IpRange": "172.16.64.0",
+        "Prefix": "19"
+      },
+      {
+        "Id": "db526379-7b78-11ef-b4b5-005056bf4891",
+        "Description": "Floating IP VM",
+        "IpRange": "172.16.96.0",
+        "Prefix": "20"
+      }
+    ]
+  }
+}
